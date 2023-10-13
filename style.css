@@ -4,7 +4,8 @@
 
 @font-face {
     font-family: 'Android';
-    src: url(fontes/IDroid.otf);
+    src: url('fontes/IDroid.otf');
+    font-weight: normal;
 }
 
 :root {
@@ -25,32 +26,38 @@
     padding: 0px;
 }
 
+p {
+    margin: 15px 0px;
+}
+
 body {
-    font-family: var(--fonte-padrao);
     background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
 }
 
 header {
-    height: 240px;
-    padding-top: 40px;
-    text-align: center;
+    background-color: var(--cor4);
     min-height: 150px;
-    color: white;
+    text-align: center;
+    padding-top: 40px;
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
 }
 
 header > h1 {
-    margin-bottom: 1px;
-    padding: 25px;
+    padding: 10px;
     font-size: 50px;
+    color: white;
     font-family: var(--fonte-destaque);
+    font-size: 3em;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 0px rgb(15, 15, 15);
 }
 
 header > p {
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
     max-width: 500px;
-    margin-bottom: 15px;
+    padding-bottom: 10px;
     margin: auto;
     padding-right: 10px;
     padding-left: 10px;
@@ -59,22 +66,23 @@ header > p {
 }
 
 nav {
-    padding-bottom: 10px;
-    text-align: center;
     background-color: var(--cor5);
-}
-
-nav a {
-    font-size: 1.2em;
-    font-style: bold;
     padding: 10px;
-    text-decoration: none;
-    color: white;
+    box-shadow: 0px 7px 9px rgb(8, 8, 8);
+    text-align: center;
 }
 
-nav a:hover {
-    transition-duration: 0.5s;
-    background-color: rgb(53, 195, 53);
+nav > a {
+    color: var(--cor2);
+    padding: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
     border-radius: 5px;
 }
 
@@ -91,57 +99,103 @@ main {
 }
 
 main h1 {
-    font-size: 30px;
-    margin-bottom: 5px;
-    padding-left: 20px;
     color: var(--cor5);
     font-family: var(--fonte-android);
+    font-size: 30px;
 }
 
 main h2 {
-    background-image: linear-gradient(to right, var(--cor2), white);
-    border-radius: 4px;
-    padding-left: 20px;
     color: var(--cor5);
     font-family: var(--fonte-android);
+    background-image: linear-gradient(to right, var(--cor1), #FFFFFF);
+    padding-left: 10px;
+    border-radius: 2px;
 }
 
 main p {
-    font-size: 1.1em;
     text-indent: 30px;
     text-align: justify;
     margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 25px;
+    margin-bottom: 15px;
+    line-height: 23px;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--cor5);
+    background-color: var(--cor2);
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main img.centralizar {
+    display: block;
+    max-width: 350px;
+    margin: auto;
+}
+
+div.class-video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56%;
+    position: relative;
+}
+
+div.class-video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 
 aside {
     background-color: var(--cor1);
+    padding: 10px;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 
-aside h3 {
+aside > h3 {
+    background-color: var(--cor4);
     color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
     border-radius: 10px 10px 0px 0px;
-    padding-left: 15px;
-    background-color: var(--cor3);
 }
 
-aside ul {
-    margin-left: 40px;
+aside > ul {
+    list-style-type: "\2714\00A0\00A0";
+    margin-left: 10px;
     list-style-position: inside;
     columns: 2;
 }
 
-aside p {
-    margin-top: 10px;
-    margin-left: 5px;
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
 }
 
-footer {
-    text-align: center;
-    color: white;
-    background-color: #063D1E;
-    margin-top: 15px;
+footer a {
+    color: rgb(246, 241, 241); /* Branco */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: rgb(216, 216, 216);
 }
